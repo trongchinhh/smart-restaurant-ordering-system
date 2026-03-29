@@ -1,0 +1,120 @@
+.order-tracking {
+    .order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+
+        h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+    }
+
+    .tracking-steps {
+        margin-bottom: 24px;
+    }
+
+    .order-info {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 20px;
+
+        h3 {
+            margin: 0 0 16px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            color: #666;
+        }
+    }
+
+    .items-list {
+        margin-bottom: 20px;
+
+        h3 {
+            margin: 0 0 16px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .item-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 12px;
+
+            .item-main {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 8px;
+
+                .item-name {
+                    font-weight: 500;
+
+                    .item-quantity {
+                        color: #ff6b6b;
+                        margin-left: 8px;
+                        font-weight: 600;
+                    }
+                }
+
+                .item-price {
+                    color: #ff6b6b;
+                    font-weight: 600;
+                }
+            }
+
+            .item-note {
+                font-size: 12px;
+                color: #ffa39e;
+                background: #fff1f0;
+                padding: 4px 8px;
+                border-radius: 4px;
+                margin-bottom: 8px;
+            }
+
+            .item-status {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    .order-total {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 20px;
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            color: #666;
+
+            &.final {
+                margin-top: 12px;
+                padding-top: 12px;
+                border-top: 1px solid #e0e0e0;
+                font-size: 16px;
+                font-weight: 600;
+
+                .total-price {
+                    color: #ff6b6b;
+                }
+            }
+        }
+    }
+
+    .back-btn {
+        height: 48px;
+        border-radius: 24px;
+    }
+}

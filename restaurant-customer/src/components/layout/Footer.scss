@@ -1,0 +1,40 @@
+.cart-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    border-top: 1px solid #f0f0f0;
+    cursor: pointer;
+
+    .cart-info {
+        .item-count {
+            font-size: 14px;
+            color: #666;
+            margin-right: 8px;
+        }
+
+        .total-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff6b6b;
+        }
+    }
+
+    .view-cart-btn {
+        background: #ff6b6b;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}

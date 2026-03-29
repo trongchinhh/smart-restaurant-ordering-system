@@ -1,0 +1,41 @@
+.cart-summary {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 16px;
+
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        color: #666;
+
+        &.total {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 16px;
+            font-weight: 600;
+
+            .total-amount {
+                color: #ff6b6b;
+            }
+        }
+    }
+
+    .checkout-btn {
+        width: 100%;
+        background: #ff6b6b;
+        color: white;
+        border: none;
+        padding: 14px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 16px;
+
+        &:hover {
+            background: #ff5252;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.site-sidebar {
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .logo-container {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        background: #001529;
+        color: white;
+        overflow: hidden;
+
+        .logo {
+            height: 32px;
+            width: auto;
+            margin-right: 8px;
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 600;
+            white-space: nowrap;
+            color: white;
+        }
+    }
+
+    .sidebar-menu {
+        height: calc(100vh - 128px);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #001529;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #1890ff;
+            border-radius: 2px;
+        }
+    }
+
+    .sidebar-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-top: 1px solid #1f2f3f;
+    }
+}

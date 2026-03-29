@@ -1,0 +1,17 @@
+.category-list {
+    .list-header {
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .category-icon {
+        font-size: 20px;
+    }
+
+    .text-muted {
+        color: #8c8c8c;
+        font-size: 12px;
+        margin-left: 4px;
+    }
+}

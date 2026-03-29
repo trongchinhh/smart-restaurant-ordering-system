@@ -1,0 +1,51 @@
+.quantity-control {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+
+    &.small {
+        .quantity-btn {
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+        }
+
+        .quantity-value {
+            min-width: 30px;
+            font-size: 13px;
+        }
+    }
+
+    .quantity-btn {
+        width: 36px;
+        height: 36px;
+        background: white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #ff6b6b;
+        font-size: 16px;
+        transition: all 0.2s;
+
+        &:hover:not(:disabled) {
+            background: #fff5f5;
+        }
+
+        &:disabled {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+    }
+
+    .quantity-value {
+        min-width: 40px;
+        text-align: center;
+        font-weight: 600;
+        color: #333;
+    }
+}

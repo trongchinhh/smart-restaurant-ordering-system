@@ -1,0 +1,35 @@
+.profile-page {
+    .profile-card {
+        text-align: center;
+
+        .profile-avatar {
+            padding: 24px 0;
+
+            h2 {
+                margin: 16px 0 8px;
+                font-size: 20px;
+            }
+
+            p {
+                margin: 4px 0;
+                color: #8c8c8c;
+            }
+
+            .user-role {
+                display: inline-block;
+                padding: 4px 12px;
+                background: #1890ff;
+                color: white;
+                border-radius: 20px;
+                font-size: 12px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+    .settings-card {
+        .ant-tabs-nav {
+            margin-bottom: 24px;
+        }
+    }
+}

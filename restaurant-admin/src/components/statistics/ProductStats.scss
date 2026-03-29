@@ -1,0 +1,14 @@
+.product-stats {
+    .product-image {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-right: 8px;
+    }
+
+    .best-selling,
+    .category-stats {
+        margin-bottom: 16px;
+    }
+}

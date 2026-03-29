@@ -1,0 +1,17 @@
+.main-layout {
+    min-height: 100vh;
+
+    .site-layout {
+        .site-content {
+            margin: 24px 16px;
+            min-height: 280px;
+
+            .content-wrapper {
+                padding: 24px;
+                background: #fff;
+                border-radius: 8px;
+                min-height: calc(100vh - 112px);
+            }
+        }
+    }
+}

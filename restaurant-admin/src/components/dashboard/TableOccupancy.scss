@@ -1,0 +1,19 @@
+.table-occupancy {
+    .table-list {
+        margin-top: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .table-tag {
+            padding: 4px 8px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

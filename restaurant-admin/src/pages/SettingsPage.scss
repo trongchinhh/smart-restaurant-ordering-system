@@ -1,0 +1,72 @@
+// SettingsPage.scss
+.settings-page {
+    padding: 24px;
+    min-height: 100vh;
+    background: #f0f2f5;
+
+    .page-header {
+        margin-bottom: 24px;
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .header-icon {
+                font-size: 32px;
+                color: #1890ff;
+                background: white;
+                padding: 12px;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 24px;
+                font-weight: 600;
+                color: #1f1f1f;
+            }
+
+            .header-description {
+                margin: 4px 0 0;
+                color: #8c8c8c;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .settings-card {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        border-radius: 12px;
+
+        .ant-card-body {
+            padding: 24px;
+        }
+
+        .ant-tabs-nav {
+            margin-bottom: 24px;
+
+            &::before {
+                border-bottom-color: #f0f0f0;
+            }
+        }
+
+        .ant-tabs-tab {
+            padding: 12px 0;
+            font-size: 15px;
+
+            .anticon {
+                margin-right: 8px;
+            }
+        }
+
+        .security-settings {
+            padding: 48px 24px;
+            text-align: center;
+            color: #8c8c8c;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+    }
+}

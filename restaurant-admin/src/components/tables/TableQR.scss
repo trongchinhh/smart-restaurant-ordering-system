@@ -1,0 +1,17 @@
+.table-qr {
+    .qr-card {
+        text-align: center;
+
+        .qr-container {
+            padding: 24px;
+
+            .qr-code {
+                margin: 16px 0;
+                padding: 16px;
+                background: #fff;
+                border-radius: 8px;
+                display: inline-block;
+            }
+        }
+    }
+}

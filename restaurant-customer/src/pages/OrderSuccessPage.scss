@@ -1,0 +1,120 @@
+.order-success {
+    text-align: center;
+
+    .success-icon {
+        width: 80px;
+        height: 80px;
+        background: #52c41a;
+        color: white;
+        font-size: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+    }
+
+    h2 {
+        margin-bottom: 8px;
+    }
+
+    .order-number {
+        color: #666;
+        margin-bottom: 24px;
+    }
+
+    .order-details {
+        text-align: left;
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 24px;
+
+        h3,
+        h4 {
+            margin: 0 0 16px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            color: #666;
+        }
+
+        .items-list {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e0e0e0;
+
+            .item-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 12px;
+
+                .item-info {
+                    flex: 2;
+
+                    small {
+                        display: block;
+                        color: #999;
+                        font-size: 11px;
+                    }
+                }
+
+                .item-quantity {
+                    flex: 1;
+                    text-align: center;
+                }
+
+                .item-price {
+                    flex: 1;
+                    text-align: right;
+                    color: #ff6b6b;
+                }
+            }
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e0e0e0;
+            font-weight: 600;
+
+            .total-price {
+                color: #ff6b6b;
+            }
+        }
+    }
+
+    .actions {
+        .primary-btn {
+            width: 100%;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+.not-found {
+    text-align: center;
+    padding: 40px;
+
+    button {
+        background: #ff6b6b;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 24px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+}

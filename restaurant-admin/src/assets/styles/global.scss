@@ -1,0 +1,104 @@
+@import './variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $background-color;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+// Common styles
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 500;
+        color: $text-color;
+    }
+}
+
+// Ant Design overrides
+.ant-layout {
+    background: $background-color;
+}
+
+.ant-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+
+    .ant-card-head {
+        border-bottom: 1px solid $border-color;
+        padding: 0 20px;
+        min-height: 48px;
+
+        .ant-card-head-title {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+
+.ant-table-wrapper {
+    .ant-table {
+        border-radius: 8px;
+    }
+}
+
+.ant-modal {
+    .ant-modal-content {
+        border-radius: 8px;
+    }
+
+    .ant-modal-header {
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+.ant-btn {
+    border-radius: 6px;
+}
+
+.ant-input,
+.ant-input-password,
+.ant-select-selector,
+.ant-picker {
+    border-radius: 6px !important;
+}
+
+// Scrollbar styles
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+
+    &:hover {
+        background: #555;
+    }
+}

@@ -1,0 +1,28 @@
+.orders-page {
+    .filters-card {
+        margin-bottom: 20px;
+        border-radius: 8px;
+
+        .filter-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: 8px;
+        }
+    }
+
+    .active-filters {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 12px;
+        border-top: 1px solid #f0f0f0;
+
+        span {
+            font-size: 13px;
+            color: #666;
+            margin-right: 8px;
+        }
+    }
+}

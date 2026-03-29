@@ -1,0 +1,149 @@
+.menu-page {
+
+    padding: 12px;
+}
+
+/* SEARCH */
+
+.search-section {
+    margin-bottom: 12px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 14px;
+
+    border-radius: 20px;
+    border: 1px solid #eee;
+
+    background: #f6f6f6;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.search-input:focus {
+    outline: none;
+    background: white;
+    border-color: #ff6b6b;
+}
+
+/* MENU LIST */
+
+.menu-list {
+    margin-top: 8px;
+}
+
+.filter-popup {
+    padding: 16px;
+
+    h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .filter-inputs {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+
+        input {
+            width: 50%;
+            min-width: 0; // 🔥 cực kỳ quan trọng (fix mobile)
+            box-sizing: border-box; // 🔥 fix lệch do padding
+
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+
+            &:focus {
+                border-color: #ff6600;
+            }
+        }
+    }
+
+    .filter-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 16px;
+
+        button {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-clear {
+            background: #f5f5f5;
+        }
+
+        .btn-apply {
+            background: #ff5252;
+            color: white;
+        }
+    }
+}
+
+.active-filter {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff3e0;
+    border: 1px solid #ffd591;
+
+    padding: 6px 10px;
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    button {
+        border: none;
+        background: transparent;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+.search-box {
+    position: relative;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+}
+
+.sort-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+    button {
+        flex: 1;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+
+        &.active {
+            background: #ff4d4f;
+            color: white;
+            border-color: #ff4d4f;
+        }
+    }
+}
+
+.sort {
+    margin-top: 10px;
+}

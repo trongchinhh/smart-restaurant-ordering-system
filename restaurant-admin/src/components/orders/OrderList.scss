@@ -1,0 +1,13 @@
+.order-list {
+    .order-list-table {
+        .ant-table-cell {
+            .order-status-badge {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .row-new {
+        background-color: #fff1f0 !important;
+    }
+}

@@ -1,0 +1,32 @@
+.revenue-stats {
+    .stat-card {
+        .ant-statistic-title {
+            font-size: 14px;
+            color: #8c8c8c;
+        }
+
+        .ant-statistic-content {
+            font-size: 28px;
+            font-weight: 600;
+        }
+    }
+
+    .payment-stats,
+    .revenue-detail {
+        margin-top: 16px;
+    }
+}
+
+.product-stats {
+    .product-image {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .best-selling,
+    .category-stats {
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,338 @@
+// Variables
+$primary-gradient-start: #667eea;
+$primary-gradient-end: #764ba2;
+$card-border-radius: 24px;
+$transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$box-shadow-sm: 0 10px 40px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
+$box-shadow-hover: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, $primary-gradient-start 0%, $primary-gradient-end 100%);
+    overflow: hidden;
+
+    // Animated background effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: moveBackground 20s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes moveBackground {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(50px, 50px);
+        }
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 440px;
+        margin: 24px;
+        border-radius: $card-border-radius;
+        box-shadow: $box-shadow-lg;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.98);
+        border: none;
+        transition: $transition-default;
+        animation: slideUp 0.5s ease-out;
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        &:hover {
+            box-shadow: $box-shadow-hover;
+            transform: translateY(-2px);
+        }
+
+        .ant-card-body {
+            padding: 40px 32px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 40px;
+
+            .login-logo {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 20px;
+                transition: $transition-default;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            h2 {
+                margin: 0 0 8px 0;
+                font-weight: 600;
+                background: linear-gradient(135deg, $primary-gradient-start, $primary-gradient-end);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: -0.5px;
+            }
+
+            .ant-typography-secondary {
+                font-size: 14px;
+                color: #8c8c8c;
+            }
+        }
+
+        .login-alert {
+            margin-bottom: 28px;
+            border-radius: 12px;
+            animation: shake 0.5s ease-out;
+
+            @keyframes shake {
+
+                0%,
+                100% {
+                    transform: translateX(0);
+                }
+
+                10%,
+                30%,
+                50%,
+                70%,
+                90% {
+                    transform: translateX(-2px);
+                }
+
+                20%,
+                40%,
+                60%,
+                80% {
+                    transform: translateX(2px);
+                }
+            }
+        }
+
+        // Form styling
+        .ant-form {
+            .ant-form-item {
+                margin-bottom: 24px;
+
+                .ant-input-affix-wrapper {
+                    border-radius: 12px;
+                    transition: $transition-default;
+                    background: #fafafa;
+                    border: 1px solid #e8e8e8;
+
+                    &:hover {
+                        border-color: $primary-gradient-start;
+                        background: #ffffff;
+                    }
+
+                    &:focus-within {
+                        border-color: $primary-gradient-start;
+                        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+                        background: #ffffff;
+                    }
+
+                    .ant-input-prefix {
+                        color: #bfbfbf;
+                        transition: $transition-default;
+                        margin-right: 12px;
+                    }
+
+                    .ant-input {
+                        background: transparent;
+
+                        &::placeholder {
+                            color: #d9d9d9;
+                        }
+                    }
+
+                    &.ant-input-affix-wrapper-focused {
+                        .ant-input-prefix {
+                            color: $primary-gradient-start;
+                        }
+                    }
+                }
+
+                .ant-input {
+                    border-radius: 12px;
+                    background: #fafafa;
+                    border: 1px solid #e8e8e8;
+                    transition: $transition-default;
+
+                    &:hover {
+                        border-color: $primary-gradient-start;
+                        background: #ffffff;
+                    }
+
+                    &:focus {
+                        border-color: $primary-gradient-start;
+                        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+                    }
+                }
+            }
+
+            .ant-btn {
+                height: 48px;
+                border-radius: 12px;
+                font-weight: 600;
+                font-size: 16px;
+                background: linear-gradient(135deg, $primary-gradient-start, $primary-gradient-end);
+                border: none;
+                transition: $transition-default;
+                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+
+                &:hover {
+                    transform: translateY(-1px);
+                    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+                    background: linear-gradient(135deg, darken($primary-gradient-start, 5%), darken($primary-gradient-end, 5%));
+                }
+
+                &:active {
+                    transform: translateY(0);
+                }
+
+                &[loading] {
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .login-footer {
+            margin-top: 32px;
+            text-align: center;
+
+            .ant-typography-secondary {
+                display: block;
+                margin-bottom: 12px;
+                font-size: 13px;
+                font-weight: 500;
+                color: #8c8c8c;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .demo-accounts {
+                margin-top: 12px;
+                padding: 16px;
+                background: linear-gradient(135deg, #f8f9ff 0%, #f5f5f5 100%);
+                border-radius: 16px;
+                transition: $transition-default;
+
+                &:hover {
+                    background: linear-gradient(135deg, #f5f7ff 0%, #f0f0f0 100%);
+                    transform: translateY(-2px);
+                }
+
+                .ant-typography {
+                    display: block;
+                    margin: 6px 0;
+                    font-size: 12px;
+                    font-family: 'Monaco', 'Menlo', monospace;
+                    color: #595959;
+                    transition: $transition-default;
+
+                    &:hover {
+                        color: $primary-gradient-start;
+                        transform: translateX(2px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: 576px) {
+    .login-container {
+        .login-card {
+            margin: 16px;
+
+            .ant-card-body {
+                padding: 32px 24px;
+            }
+
+            .login-header {
+                margin-bottom: 32px;
+
+                .login-logo {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                h2 {
+                    font-size: 24px;
+                }
+            }
+
+            .ant-form {
+                .ant-btn {
+                    height: 44px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+    .login-container {
+        .login-card {
+            background: rgba(30, 30, 35, 0.98);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+            .login-header {
+                h2 {
+                    background: linear-gradient(135deg, lighten($primary-gradient-start, 10%), lighten($primary-gradient-end, 10%));
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                }
+            }
+
+            .ant-form {
+                .ant-input-affix-wrapper {
+                    background: rgba(40, 40, 45, 0.8);
+                    border-color: rgba(255, 255, 255, 0.1);
+
+                    &:hover {
+                        background: rgba(50, 50, 55, 0.9);
+                        border-color: $primary-gradient-start;
+                    }
+                }
+            }
+
+            .login-footer {
+                .demo-accounts {
+                    background: rgba(40, 40, 45, 0.6);
+
+                    .ant-typography {
+                        color: #bfbfbf;
+                    }
+                }
+            }
+        }
+    }
+}
